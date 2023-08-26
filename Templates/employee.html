@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>medical shop </title>
+</head>
+<body>
+<h1> Add Employee Data </h1>
+<form method="post" action="{% url 'empsave' %}"enctype="multipart/form-data">
+                     {% csrf_token %}
+
+			<label for="name"> Name:</label>
+			<input type="text" id="name" name="name" required><br><br>
+
+            <label for="name"> Mobile:</label>
+			<input type="number" id="number" name="Mobile" required><br><br>
+
+            <label for="name"> Email:</label>
+			<input type="text" id="email" name="Email" required><br><br>
+
+            <label for="name"> Company:</label>
+			<input type="text" id="company" name="company" required><br><br>
+
+            <label for="name"> Salary:</label>
+			<input type="text" id="salary" name="salary" required><br><br>
+
+             <input type="file" name="image"><br>
+
+			<input type="submit" value="Submit"><br><br>
+		</form>
+</body>
+</html>

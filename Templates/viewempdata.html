@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width:70% ; text-align:center">
+    <tr>
+         <th>Name</th>
+         <th>mobile</th>
+         <th>email</th>
+        <th>company</th>
+        <th>salary</th>
+        <th>image</th>
+    </tr>
+   {% for d in data %}
+    <tr>
+         <th>{{d.name }}</th>
+         <th>{{d.mobile}}</th>
+        <th>{{d.email}}</th>
+        <th>{{d.company}}</th>
+        <th>{{d.salary}}</th>
+         <td>
+            <img src = " {{d.image.url}}"  width = "100px" height = "100px">
+         </td>
+        <td>
+            <form action="{% url 'editempldata' dataid=d.id %}">
+                <button >Edit Data</button>
+            </form>
+        </td>
+        <td>
+            <form action="{% url 'deleteemp' dataid=d.id %}">
+                <button >Delete Data</button>
+            </form>
+        </td>
+    </tr>
+       {% endfor %}
+</table>
+</body>
+</html>

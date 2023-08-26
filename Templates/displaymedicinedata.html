@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width:70% ; text-align:center">
+    <tr>
+         <th>Name</th>
+         <th>Description</th>
+         <th>Image</th>
+    </tr>
+   {% for d in data %}
+    <tr>
+         <th>{{d.name }}</th>
+         <th>{{d.description}}</th>
+         <td>
+            <img src = " {{d.image.url}}"  width = "100px" height = "100px">
+         </td>
+    </tr>
+       {% endfor %}
+</table>
+</body>
+</html>
